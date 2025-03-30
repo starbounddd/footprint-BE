@@ -60,6 +60,7 @@ public class RunScannerHandler implements Route {
             "Match Not Found.  With a score of" + score + ", the two footprints are not similar");
       }
       return new ScannerSuccessResponse(responseMap).serialize();
+
     } catch (Exception e) {
       e.printStackTrace();
       return new ScannerFailureResponse("error_scanning").serialize();
